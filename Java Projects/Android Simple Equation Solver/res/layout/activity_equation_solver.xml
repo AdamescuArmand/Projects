@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EquationSolver">
+
+    <Button
+        android:id="@+id/button_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Linear Equations"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_quadratic"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="2dp"/>
+
+    <Button
+        android:id="@+id/button_quadratic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quadratic Equations"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_linear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_marginTop="56dp"/>
+
+    <!-- Linear Equation -->
+    <LinearLayout
+        android:id="@+id/linear_equations_section"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/button_linear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintWidth_percent="1.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the value of A" />
+
+        <EditText
+            android:id="@+id/edittext_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the value of B" />
+
+        <EditText
+            android:id="@+id/edittext_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter what the equation should be equal to" />
+
+        <EditText
+            android:id="@+id/edittext_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <Button
+            android:id="@+id/button_calculate_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate" />
+
+        <TextView
+            android:id="@+id/textview_solution_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solution: "
+            android:visibility="gone"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            android:id="@+id/view_divider_linear" />
+
+        <TextView
+            android:id="@+id/textview_steps_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Steps: "
+            android:visibility="gone"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Quadratic Equation -->
+    <LinearLayout
+        android:id="@+id/quadratic_equations_section"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/button_linear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintWidth_percent="1.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the value of A" />
+
+        <EditText
+            android:id="@+id/edittext_quad_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the value of B" />
+
+        <EditText
+            android:id="@+id/edittext_quad_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the value of C" />
+
+        <EditText
+            android:id="@+id/edittext_quad_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter what the equation should be equal to" />
+
+        <EditText
+            android:id="@+id/edittext_quad_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned|numberDecimal" />
+
+        <Button
+            android:id="@+id/button_calculate_quadratic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate" />
+
+        <TextView
+            android:id="@+id/textview_solution_quadratic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solution: "
+            android:visibility="gone"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            android:id="@+id/view_divider_quadratic" />
+
+        <TextView
+            android:id="@+id/textview_steps_quadratic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Steps: "
+            android:visibility="gone"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

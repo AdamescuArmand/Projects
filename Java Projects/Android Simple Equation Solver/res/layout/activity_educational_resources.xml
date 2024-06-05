@@ -1,0 +1,79 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EducationalResources">
+
+    <Button
+        android:id="@+id/button_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Linear Equations"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_quadratic"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="2dp"/>
+
+    <Button
+        android:id="@+id/button_quadratic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quadratic Equations"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_linear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_marginTop="56dp"/>
+
+    <!-- Linear Equations -->
+    <LinearLayout
+        android:id="@+id/linear_equations_section"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/button_linear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintWidth_percent="1.0">
+
+        <TextView
+            android:id="@+id/textview_linear_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The standard form or the general form of linear equations in one variable is written as, Ax + B = 0; where A and B are real numbers, and x is the single variable. The standard form of linear equations in two variables is expressed as, Ax + By = C; where A, B and C are any real numbers, and x and y are the variables. An equation is like a weighing balance with equal weights on both sides. If we add or subtract the same number from both sides of an equation, it still holds true. Similarly, if we multiply or divide the same number on both sides of an equation, it is correct. We bring the variables to one side of the equation and the constant to the other side and then find the value of the unknown variable. This is the way to solve a linear equation with one variable."
+            android:padding="16dp"
+            android:textSize="24sp"/>
+    </LinearLayout>
+
+    <!-- Quadratic Equations-->
+    <LinearLayout
+        android:id="@+id/quadratic_equations_section"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/button_linear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintWidth_percent="1.0">
+
+        <TextView
+            android:id="@+id/textview_quadratic_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A quadratic equation is an algebraic equation of the second degree in x. The quadratic equation in its standard form is ax² + bx + c = 0, where a and b are the coefficients, x is the variable, and c is the constant term. The important condition for an equation to be a quadratic equation is the coefficient of x² is a non-zero term (a ≠ 0). For writing a quadratic equation in standard form, the x² term is written first, followed by the x term, and finally, the constant term is written. The roots of a quadratic equation ax² + bx + c = 0 are given by x = [-b ± √(b² - 4ac)]/2a."
+            android:padding="16dp"
+            android:textSize="24sp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
